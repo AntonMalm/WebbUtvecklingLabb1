@@ -3,21 +3,21 @@
 const products = [
   {
     imageSrc:
-      "https://assets.icanet.se/t_ICAseAbsoluteUrl/imagevaultfiles/id_248444/cf_259/kebabpizza.jpg",
+      "https://raw.githubusercontent.com/AntonMalm/WebbUtvecklingLabb1/main/images/KebabPizzaProduct.webp",
     title: "KebabPizza",
     description:
       "Våran populäraste pizza med svenskt nötkött tillsammans med världens godaste kebabsås",
     price: 130,
   },
   {
-    imageSrc: "https://kronansköping.se/wp-content/uploads/2023/01/Vesuvio.jpg",
+    imageSrc: "https://raw.githubusercontent.com/AntonMalm/WebbUtvecklingLabb1/main/images/VesuvioProduct.webp",
     title: "Vesuvio",
     description: "För dig som inte vill sticka ut, trots detta alltid god",
     price: 110,
   },
   {
     imageSrc:
-      "https://cdn.kronfagel.se/app/uploads/2019/07/Kebab-i-br%C3%B6d-med-myntayoghurt-och-harissadressing.jpg",
+      "https://raw.githubusercontent.com/AntonMalm/WebbUtvecklingLabb1/main/images/KebabIPitaProduct.webp",
     title: "Kebab i pita",
     description: "Pita i bröd, kan det bli godare?",
     price: 99,
