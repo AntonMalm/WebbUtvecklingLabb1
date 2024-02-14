@@ -1,0 +1,19 @@
+/* styles.css */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    opacity: 90%;
+}
+
+.col {
+    padding: 20px;
+}
+
+body{
+    background-color:darkgray;
+}
+
+.img{
+    border-radius: 30%;
+}
