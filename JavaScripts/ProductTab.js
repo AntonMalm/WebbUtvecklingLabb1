@@ -1,23 +1,23 @@
 // ProductTab.js
-
+let cost = 0;
 const products = [
   {
     imageSrc:
-      "https://raw.githubusercontent.com/AntonMalm/WebbUtvecklingLabb1/main/images/KebabPizzaProduct.webp",
+      "../images/KebabPizzaProduct.webp",
     title: "KebabPizza",
     description:
       "Våran populäraste pizza med svenskt nötkött tillsammans med världens godaste kebabsås",
     price: 130,
   },
   {
-    imageSrc: "https://raw.githubusercontent.com/AntonMalm/WebbUtvecklingLabb1/main/images/VesuvioProduct.webp",
+    imageSrc: "../images/VesuvioProduct.webp",
     title: "Vesuvio",
     description: "För dig som inte vill sticka ut, trots detta alltid god",
     price: 110,
   },
   {
     imageSrc:
-      "https://raw.githubusercontent.com/AntonMalm/WebbUtvecklingLabb1/main/images/KebabIPitaProduct.webp",
+      "../images/KebabIPitaProduct.webp",
     title: "Kebab i pita",
     description: "Pita i bröd, kan det bli godare?",
     price: 99,
@@ -86,6 +86,11 @@ function addToCart(product) {
   const cartItem = document.createElement("div");
   const itemName = document.createElement("span");
   const removeButton = document.createElement("button");
+
+  cost += product.price;
+  var cartTotal = document.getElementById("CartTotal");
+  cartTotal.innerText = "Kundvagnens pris: " + cost + "kr";
+
 
   cartItem.classList.add("cart-item", "d-flex", "mb-2", "p-2", "mg-4");
   itemName.innerText = product.title;
