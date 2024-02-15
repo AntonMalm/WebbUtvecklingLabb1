@@ -150,7 +150,7 @@ function addToCart(product) {
   cartTotal.innerText = "Kundvagnens pris: " + cost + "kr";
 
   cartItem.classList.add("cart-item", "d-flex", "mb-2", "p-2", "mg-4");
-  itemName.innerText = product.title;
+  itemName.innerText = product.title + "";
   removeButton.innerText = "Ta bort";
   removeButton.classList.add("btn", "btn-danger", "btn-sm");
   removeButton.onclick = () => removeCartItem(li);
