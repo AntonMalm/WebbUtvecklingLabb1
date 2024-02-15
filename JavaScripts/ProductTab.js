@@ -58,7 +58,7 @@ function displayProducts() {
 
     price.innerText = product.price + " kr";
     addButton.innerText = "Lägg till";
-    moreInfoButton.innerText = "More Info";
+    moreInfoButton.innerText = "Mer info";
 
     addButton.onclick = () => addToCart(product);
     moreInfoButton.setAttribute("data-toggle", "modal");
@@ -118,8 +118,8 @@ function createModal(id, ModalDescription) {
 
 
 function applyProductStyles(li, card, cardBody, cardTitle, cardDescription, addButton, moreInfoButton, price) {
-  li.classList.add("col-sm", "list-group-item", "d-flex", "justify-content-center", "bg-dark", "m-3"); // Add 'm-3' class here
-  card.classList.add("card", "border-0", "card-style", "text-center", "bg-dark", "rounded");
+  li.classList.add("col-sm", "list-group-item", "d-flex", "justify-content-center", "bg-secondary", "m-3", "rounded"); // Add 'm-3' class here
+  card.classList.add("card", "border-0", "card-style", "text-center", "bg-secondary");
   cardBody.classList.add("card-body", "d-flex", "flex-column", "flex-grow-1", "text-white");
   cardTitle.classList.add("card-title");
   cardDescription.classList.add("card-text");
