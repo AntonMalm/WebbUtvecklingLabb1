@@ -8,15 +8,18 @@ h1 {
 body {
     background-color: darkgray;
 }
+
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 500px;
     width: 100%;
 }
+
 #TempBox{
     font-size: 20px;
 }
+
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
@@ -26,10 +29,10 @@ p {
     font-size: 20px;
 }
 
-
 h3 {
     color: steelblue;
 }
+
 footer {
     background-color: antiquewhite;
 }

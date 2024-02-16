@@ -25,6 +25,7 @@ const products = [
     ModalDescription: "Kebab i pitabröd är en populär maträtt där saftigt, kryddat kebabkött packas in i ett mjukt och fluffigt pitabröd. Den kompletteras ofta med färska grönsaker och en krämig sås som ger en härlig kontrast till det kryddiga köttet. Denna rätt är både smakrik och mättande, vilket gör den till ett utmärkt val för en snabb och tillfredsställande måltid.",
     price: 99,
   },
+  
 ];
 function displayProducts() {
   const productList = document.getElementById("productList");
@@ -39,12 +40,10 @@ function displayProducts() {
     const price = document.createElement("p");
     const addButton = document.createElement("a");
     const moreInfoButton = document.createElement("button");
-    const buttonDiv = document.createElement("div"); // Create a div to wrap the buttons
-
-    // Create unique id for each product modal
+    const buttonDiv = document.createElement("div"); 
+   
     const modalId = "modal" + product.title.replace(/\s/g, '');
 
-    // Create modal for each product
     const modal = createModal(modalId, product.ModalDescription);
 
     applyProductStyles(li, card, cardBody, cardTitle, cardDescription, addButton, moreInfoButton, price);
@@ -64,18 +63,18 @@ function displayProducts() {
     moreInfoButton.setAttribute("data-toggle", "modal");
     moreInfoButton.setAttribute("data-target", "#" + modalId);
 
-    buttonDiv.classList.add("mt-auto"); // Add 'mt-auto' class to the button div
+    buttonDiv.classList.add("mt-auto"); 
     buttonDiv.appendChild(addButton);
     buttonDiv.appendChild(moreInfoButton);
 
     cardBody.appendChild(img);
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardDescription);
-    cardBody.appendChild(buttonDiv); // Append the button div to the card body
+    cardBody.appendChild(buttonDiv);
     card.appendChild(cardBody);
     cardBody.appendChild(price);
     li.appendChild(card);
-    li.appendChild(modal);  // Append the modal to the product list item
+    li.appendChild(modal); 
 
     productList.appendChild(li);
   }
@@ -83,14 +82,12 @@ function displayProducts() {
 
 
 function createModal(id, ModalDescription) {
-  // Create modal elements
   const modalDiv = document.createElement("div");
   const modalDialog = document.createElement("div");
   const modalContent = document.createElement("div");
   const modalBody = document.createElement("div");
   const modalDescription = document.createElement("p");
 
-  // Set modal attributes
   modalDiv.classList.add("modal", "fade");
   modalDiv.id = id;
   modalDiv.setAttribute("tabindex", "-1");
@@ -106,7 +103,6 @@ function createModal(id, ModalDescription) {
   modalBody.classList.add("modal-body");
   modalDescription.innerText = ModalDescription;
 
-  // Append elements to modal
   modalBody.appendChild(modalDescription);
   modalContent.appendChild(modalBody);
   modalDialog.appendChild(modalContent);
@@ -118,13 +114,13 @@ function createModal(id, ModalDescription) {
 
 
 function applyProductStyles(li, card, cardBody, cardTitle, cardDescription, addButton, moreInfoButton, price) {
-  li.classList.add("col-sm", "list-group-item", "d-flex", "justify-content-center", "bg-secondary", "m-3", "rounded"); // Add 'm-3' class here
+  li.classList.add("col-sm", "list-group-item", "d-flex", "justify-content-center", "bg-secondary", "m-3", "rounded"); 
   card.classList.add("card", "border-0", "card-style", "text-center", "bg-secondary");
   cardBody.classList.add("card-body", "d-flex", "flex-column", "flex-grow-1", "text-white");
   cardTitle.classList.add("card-title");
   cardDescription.classList.add("card-text");
   addButton.classList.add("btn", "btn-primary", "btn-success", "mt-auto");
-  moreInfoButton.classList.add("btn", "btn-primary", "mt-auto", "btn-no-margin"); // Add 'btn-no-margin' class here
+  moreInfoButton.classList.add("btn", "btn-primary", "mt-auto", "btn-no-margin"); 
 
   price.classList.add("text-grey");
 }
@@ -140,7 +136,7 @@ function addToCart(product) {
   const cartList = document.getElementById("cartList");
 
   const li = document.createElement("li");
-  li.dataset.price = product.price; // Store the price in a data attribute
+  li.dataset.price = product.price; 
   const cartItem = document.createElement("div");
   const itemName = document.createElement("span");
   const removeButton = document.createElement("button");
@@ -164,7 +160,7 @@ function addToCart(product) {
 
 function removeCartItem(cartItem) {
   const cartList = document.getElementById("cartList");
-  const price = Number(cartItem.dataset.price); // Retrieve the price from the data attribute
+  const price = Number(cartItem.dataset.price); 
 
   cartList.removeChild(cartItem);
   cost -= price;
